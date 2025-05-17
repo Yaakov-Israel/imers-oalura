@@ -58,6 +58,6 @@ Certifique-se de ter uma conexão ativa e que sua API Key está configurada corr
 
 ## 👨‍💻 Autor
 
--   [Seu Nome Completo](Link para seu perfil do GitHub, LinkedIn, etc., opcional)
+-   [Yaakov Israel][(https://github.com/Yaakov-Israel)
 
 ---
