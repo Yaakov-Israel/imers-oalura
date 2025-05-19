@@ -1,0 +1,2 @@
+Esta pasta destina-se a armazenar os ficheiros de dados utilizados pelo projeto Super Agente Olhos da Lei.
+Aqui podem ser incluídos datasets, ficheiros de configuração relacionados com dados, ou quaisquer outros artefactos de dados necessários para a execução ou compreensão do projeto.
