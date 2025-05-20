@@ -63,9 +63,9 @@ else:
 st.sidebar.markdown("---")
 st.sidebar.info(
     """
-    **Olhos da Lei v0.4.2**\n
+    **Olhos da Lei v0.4.3**\n
     Demonstração do ciclo operacional.
-    (Verificação de sintaxe)
+    (Verificando dependências)
     """
 )
 st.sidebar.caption(f"Hoje é {datetime.now().strftime('%d/%m/%Y')}")
@@ -175,7 +175,7 @@ elif pagina_selecionada == "Análise com IA (Gemini)":
         prompt_default = "Super Agente, quais são os procedimentos padrão ao detectar uma briga em uma praça pública?"
         prompt_usuario = st.text_area("Seu comando ou pergunta para o Super Agente:", value=prompt_default, height=150, key="gemini_prompt_interacao")
         if st.button("🧠 Enviar para Super Agente", key="gemini_submit_interacao_btn"):
-            if prompt_usuario:  # ESTA É A LINHA CRÍTICA - Verifique se o ':' está aqui!
+            if prompt_usuario: 
                 with st.spinner("Super Agente processando..."):
                     try:
                         response = model_pro.generate_content(prompt_usuario)
@@ -324,13 +324,13 @@ elif pagina_selecionada == "Integração com Cães-Robôs":
         st.subheader("Comandos Manuais (Simulação)")
         comando_col1, comando_col2 = st.columns(2)
         with comando_col1:
-            if st.button(f"🚁 Enviar {robo_selecionado_nome} para Patrulha", key=f"cmd_patrulha_{robo_selecionado_nome.replace(' ', '_')}"): # Adicionando replace para key
+            if st.button(f"🚁 Enviar {robo_selecionado_nome} para Patrulha", key=f"cmd_patrulha_{robo_selecionado_nome.replace(' ', '_')}"):
                 st.session_state.status_robos[robo_selecionado_nome]["status"] = "Em Patrulha"
                 st.session_state.status_robos[robo_selecionado_nome]["local"] = "Setor Designado"
                 st.success(f"{robo_selecionado_nome} enviado para patrulha.")
                 st.rerun()
         with comando_col2:
-            if st.button(f"🏠 Retornar {robo_selecionado_nome} à Base", key=f"cmd_base_{robo_selecionado_nome.replace(' ', '_')}"): # Adicionando replace para key
+            if st.button(f"🏠 Retornar {robo_selecionado_nome} à Base", key=f"cmd_base_{robo_selecionado_nome.replace(' ', '_')}"):
                 st.session_state.status_robos[robo_selecionado_nome]["status"] = "Retornando à Base"
                 st.session_state.status_robos[robo_selecionado_nome]["local"] = "Base"
                 st.success(f"{robo_selecionado_nome} retornando à base.")
